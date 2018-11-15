@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15-nov-2018 14:23:57 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.rkosistemas.model.Perfilusuario" table="perfilusuario" schema="dbo" catalog="restoitsco" optimistic-lock="version">
+        <id name="perfilusuarioid" type="int">
+            <column name="perfilusuarioid" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="perfil" class="com.rkosistemas.model.Perfil" fetch="select">
+            <column name="perfilid" />
+        </many-to-one>
+        <property name="usuarioid" type="java.lang.Integer">
+            <column name="usuarioid" />
+        </property>
+        <property name="perfilusuarioFechaCreacion" type="timestamp">
+            <column name="perfilusuarioFechaCreacion" length="23" />
+        </property>
+        <property name="perfilusuarioFechaModificacion" type="timestamp">
+            <column name="perfilusuarioFechaModificacion" length="23" />
+        </property>
+        <property name="perfilusuarioEstado" type="serializable">
+            <column name="perfilusuarioEstado" />
+        </property>
+    </class>
+</hibernate-mapping>
