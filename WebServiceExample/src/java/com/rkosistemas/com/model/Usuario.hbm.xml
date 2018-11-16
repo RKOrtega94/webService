@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15-nov-2018 14:23:57 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="restoitsco" name="com.rkosistemas.com.model.Usuario" optimistic-lock="version" schema="dbo" table="usuario">
+    <id name="usuarioId" type="int">
+      <column name="usuarioId"/>
+      <generator class="assigned"/>
+    </id>
+    <many-to-one class="com.rkosistemas.com.model.Empleado" fetch="select" name="empleado">
+      <column name="empleadoId"/>
+    </many-to-one>
+    <property name="usuarioUsername" type="string">
+      <column length="50" name="usuarioUsername"/>
+    </property>
+    <property name="usuarioPassword" type="string">
+      <column length="50" name="usuarioPassword"/>
+    </property>
+    <property name="usuarioFechaCreacion" type="timestamp">
+      <column length="23" name="usuarioFechaCreacion"/>
+    </property>
+    <property name="usuarioFechaModificacion" type="timestamp">
+      <column length="23" name="usuarioFechaModificacion"/>
+    </property>
+    <property name="usuarioEstado" type="java.lang.Character">
+      <column length="1" name="usuarioEstado"/>
+    </property>
+  </class>
+</hibernate-mapping>

@@ -9,11 +9,11 @@
     <property name="dialect">org.hibernate.dialect.SQLServerDialect</property>
     <property name="hibernate.search.autoregister_listeners">true</property>
     <property name="hibernate.validator.apply_to_ddl">false</property>
-    <mapping resource="com/rkosistemas/model/Usuario.hbm.xml"/>
-    <mapping resource="com/rkosistemas/model/Empleado.hbm.xml"/>
-    <mapping resource="com/rkosistemas/model/Cargo.hbm.xml"/>
-    <mapping resource="com/rkosistemas/model/Perfil.hbm.xml"/>
-    <mapping resource="com/rkosistemas/model/Perfilusuario.hbm.xml"/>
-    <mapping resource="com/rkosistemas/model/Empresa.hbm.xml"/>
+    <mapping resource="com/rkosistemas/com/model/Usuario.hbm.xml"/>
+    <mapping resource="com/rkosistemas/com/model/Empleado.hbm.xml"/>
+    <mapping resource="com/rkosistemas/com/model/Cargo.hbm.xml"/>
+    <mapping resource="com/rkosistemas/com/model/Perfil.hbm.xml"/>
+    <mapping resource="com/rkosistemas/com/model/Perfilusuario.hbm.xml"/>
+    <mapping resource="com/rkosistemas/com/model/Empresa.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>

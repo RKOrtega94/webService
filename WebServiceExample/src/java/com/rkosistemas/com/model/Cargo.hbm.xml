@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15-nov-2018 14:23:57 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="restoitsco" name="com.rkosistemas.com.model.Cargo" optimistic-lock="version" schema="dbo" table="cargo">
+    <id name="cargoId" type="int">
+      <column name="cargoId"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="cargoDescripcion" type="string">
+      <column length="100" name="cargoDescripcion"/>
+    </property>
+    <property name="cargoFechaCreacion" type="timestamp">
+      <column length="23" name="cargoFechaCreacion"/>
+    </property>
+    <property name="cargoFechaModificacion" type="timestamp">
+      <column length="23" name="cargoFechaModificacion"/>
+    </property>
+    <property name="cargoEstado" type="serializable">
+      <column name="cargoEstado"/>
+    </property>
+    <set fetch="select" inverse="true" lazy="true" name="empleados" table="empleado">
+      <key>
+        <column name="cargoId"/>
+      </key>
+      <one-to-many class="com.rkosistemas.com.model.Empleado"/>
+    </set>
+  </class>
+</hibernate-mapping>

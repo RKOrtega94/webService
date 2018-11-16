@@ -1,4 +1,4 @@
-package com.rkosistemas.model;
+package com.rkosistemas.com.model;
 // Generated 15-nov-2018 14:23:45 by Hibernate Tools 4.3.1
 
 
