@@ -23,7 +23,7 @@ public class EmpresaImplement implements DAOInterface {
         Session session = sessionFactory.openSession();
         try {
             session.beginTransaction();
-            session.saveOrUpdate(empresa);
+            session.save(empresa);
             session.getTransaction().commit();
         } catch (Exception e) {
             result = false;
