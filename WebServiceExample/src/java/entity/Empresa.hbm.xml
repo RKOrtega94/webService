@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 17-nov-2018 22:40:14 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="entity.Empresa" table="empresa" schema="dbo" catalog="restoitsco" optimistic-lock="version">
+        <id name="empresaId" type="int">
+            <column name="empresaId" />
+            <generator class="identity" />
+        </id>
+        <property name="empresaRazonSocial" type="string">
+            <column name="empresaRazonSocial" length="250" />
+        </property>
+        <property name="empresaRuc" type="string">
+            <column name="empresaRuc" length="15" />
+        </property>
+        <property name="empresaDireccion" type="string">
+            <column name="empresaDireccion" length="250" />
+        </property>
+        <property name="empresaTelefono" type="string">
+            <column name="empresaTelefono" length="15" />
+        </property>
+        <property name="empresaCorreo" type="string">
+            <column name="empresaCorreo" length="200" />
+        </property>
+        <property name="empresaFechaCreacion" type="timestamp">
+            <column name="empresaFechaCreacion" length="23" />
+        </property>
+        <property name="empresaFechaModificacion" type="timestamp">
+            <column name="empresaFechaModificacion" length="23" />
+        </property>
+        <property name="empresaEstado" type="java.lang.Character">
+            <column name="empresaEstado" length="1" />
+        </property>
+    </class>
+</hibernate-mapping>
